@@ -17,7 +17,7 @@ func ReadNums(filename string) (nums []float64, err error) {
 	if err != nil {
 		return nil, err
 	}
-	// Split the file into a slice of string
+	// Split the file into a slice of strings
 	lines := strings.Split(string(x), "\n")
 	// Make a cap to avoid resizing array on evert append
 	nums = make([]float64, 0, len(lines))
