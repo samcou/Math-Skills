@@ -35,6 +35,7 @@ func ReadNums(filename string) (nums []float64, err error) {
 	}
 	return nums, nil
 }
+
 func Average(arr []float64) float64 {
 	var result float64
 	result = 0
@@ -62,6 +63,7 @@ func Median(arr []float64) float64 {
 	}
 	return median
 }
+
 func Variance(nums []float64) float64 {
 	var sum float64
 	var mean float64
@@ -75,6 +77,7 @@ func Variance(nums []float64) float64 {
 	}
 	return variance / float64(len(nums))
 }
+
 func main() {
 	nums, err := ReadNums(os.Args[1])
 	if err != nil {
@@ -82,6 +85,6 @@ func main() {
 	}
 	fmt.Println("Average:", math.Round(Average(nums)))
 	fmt.Println("Median:", math.Round(Median(nums)))
-	fmt.Println("Variance:", math.Round(Variance(nums)))
+	fmt.Println("Variance:", int(math.Round(Variance(nums))))
 	fmt.Println("Standard Deviation:", math.Round(math.Sqrt(Variance(nums))))
 }
