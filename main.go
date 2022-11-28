@@ -11,7 +11,7 @@ import (
 
 // ReadNums reads a file and returns a slice of numbers
 func ReadNums(filename string) (nums []float64, err error) {
-	// Open the file
+	// Open the file based off argument
 	x, err := os.ReadFile(os.Args[1])
 	// If there is an error, return it
 	if err != nil {
